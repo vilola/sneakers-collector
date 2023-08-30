@@ -9,7 +9,7 @@ import { Button, Input, SneakersList } from "../../components";
 const Collection = () => {
   // DATA
   const { state, dispatch } = useContext(SneakersContext);
-
+  const  {data, loading } = state;
   useEffect(() => {
     dispatch({ type: "loading" });
 
@@ -39,20 +39,20 @@ const Collection = () => {
   };
 
   // FILTER
-  const [filteredData, setFilteredData] = useState(state.data);
+  const [filteredData, setFilteredData] = useState(data);
 
   useEffect(() => {
-    if (searchParams.get("findSneakers") && state.data) {
-      const result = state.data.filter((item: SneakersType) =>
+    if (searchParams.get("findSneakers") && data) {
+      const result = data.filter((item: SneakersType) =>
         item.name
           .toLowerCase()
           .includes(searchParams.get("findSneakers")?.toLowerCase() || ""),
       );
       setFilteredData(result);
     } else {
-      setFilteredData(state.data);
+      setFilteredData(data);
     }
-  }, [state.data, searchParams]);
+  }, [data, searchParams]);
 
   return (
     <>
@@ -80,48 +80,51 @@ const Collection = () => {
             </Button>
           </div>
         </header>
-        {state.data.length > 0 ? (
-          filteredData.length > 0 ? (
-            <>
-              {searchParams.get("findSneakers") && (
-                <div className="searchHeader">
-                  Search results for
-                  <h3 className="m-0">{searchParams.get("findSneakers")} ({filteredData.length})</h3>
-                </div>
-              )}
-              <SneakersList data={filteredData} />
-            </>
+        {loading && <></>}
+        {!loading && (
+          data.length > 0 ? (
+            filteredData.length > 0 ? (
+              <>
+                {searchParams.get("findSneakers") && (
+                  <div className="searchHeader">
+                    Search results for
+                    <h3 className="m-0">{searchParams.get("findSneakers")} ({filteredData.length})</h3>
+                  </div>
+                )}
+                <SneakersList data={filteredData} />
+              </>
+            ) : (
+              <section className="hero">
+                <img
+                  className="hero__img"
+                  width="422px"
+                  height="472px"
+                  src="/assets/empty-search.svg"
+                  alt=""
+                />
+                <p className="content text-center">
+                  Search better.
+                  <br />
+                  There is nothing like this in your collection.{" "}
+                </p>
+              </section>
+            )
           ) : (
             <section className="hero">
               <img
-                className="hero__img"
-                width="422px"
-                height="472px"
-                src="/assets/empty-search.svg"
+                className="hero_img"
+                width="868px"
+                src="/assets/empty-collection.svg"
                 alt=""
               />
               <p className="content text-center">
-                Search better.
+                Seem's like you still didn't add
                 <br />
-                There is nothing like this in your collection.{" "}
+                any new sneaker to your collection
               </p>
             </section>
-          )
-        ) : (
-          <section className="hero">
-            <img
-              className="hero_img"
-              width="868px"
-              src="/assets/empty-collection.svg"
-              alt=""
-            />
-            <p className="content text-center">
-              Seem's like you still didn't add
-              <br />
-              any new sneaker to your collection
-            </p>
-          </section>
-        )}
+          ))
+        }
 
         <Button
           className="mobile-btn md-d-none d-block"
