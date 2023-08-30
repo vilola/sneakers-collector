@@ -80,10 +80,17 @@ const Collection = () => {
             </Button>
           </div>
         </header>
-
         {state.data.length > 0 ? (
           filteredData.length > 0 ? (
-            <SneakersList data={filteredData} />
+            <>
+              {searchParams.get("findSneakers") && (
+                <div className="searchHeader">
+                  Search results for
+                  <h3 className="m-0">{searchParams.get("findSneakers")} ({filteredData.length})</h3>
+                </div>
+              )}
+              <SneakersList data={filteredData} />
+            </>
           ) : (
             <section className="hero">
               <img
