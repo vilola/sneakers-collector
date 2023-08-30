@@ -1,0 +1,19 @@
+// BREAKPOINTS
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// BASE VALUES
+$c--black: #191919;
+$c--dark-gray: #373737;
+$c--gray: #eeeff0;
+$c--gray-50: #808080;
+$c--gray-80: #cccccc;
+$c--white: #ffffff;
+$c--red: #ef233c;
+$c--blue: #20a9f3;
+
+$font-family-primary: "Excon", sans-serif;
+$font-family-secondary: "Boxing", sans-serif;
+
+// Path: src/scss/base.scss
+$body-bg: $c--gray;

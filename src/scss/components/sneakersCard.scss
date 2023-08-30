@@ -1,0 +1,93 @@
+.sneakersCard {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $c--white;
+  padding: 2.4rem;
+  border-radius: 12px;
+  box-shadow: 0px 3px 5px 0px rgba(6, 31, 106, 0.05);
+  transition: scale 0.3s ease-in-out;
+  text-decoration: none;
+  color: $c--black;
+  height: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    scale: 1.02;
+  }
+}
+
+.sneakersCard__title {
+  font-family: $font-family-primary;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.4rem;
+  margin: 0;
+  padding-right: 2.4rem;
+
+  small {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+}
+.sneakersCard__delete {
+  cursor: pointer;
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  text-indent: 2.4rem;
+  overflow: hidden;
+  border: 0;
+
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9Imljb25zLzI0cHgvdHJhc2giPgo8ZyBpZD0iVmVjdG9yIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDZDMiA1LjQ0NzcyIDIuNDQ3NzIgNSAzIDVIMjFDMjEuNTUyMyA1IDIyIDUuNDQ3NzIgMjIgNkMyMiA2LjU1MjI4IDIxLjU1MjMgNyAyMSA3SDNDMi40NDc3MiA3IDIgNi41NTIyOCAyIDZaIiBmaWxsPSIjMTkxOTE5Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTAgM0M5LjczNDc4IDMgOS40ODA0MyAzLjEwNTM2IDkuMjkyODkgMy4yOTI4OUM5LjEwNTM2IDMuNDgwNDMgOSAzLjczNDc4IDkgNFY2QzkgNi41NTIyOCA4LjU1MjI4IDcgOCA3QzcuNDQ3NzIgNyA3IDYuNTUyMjggNyA2VjRDNyAzLjIwNDM1IDcuMzE2MDcgMi40NDEyOSA3Ljg3ODY4IDEuODc4NjhDOC40NDEyOSAxLjMxNjA3IDkuMjA0MzUgMSAxMCAxSDE0QzE0Ljc5NTYgMSAxNS41NTg3IDEuMzE2MDcgMTYuMTIxMyAxLjg3ODY4QzE2LjY4MzkgMi40NDEyOSAxNyAzLjIwNDM1IDE3IDRWNkMxNyA2LjU1MjI4IDE2LjU1MjMgNyAxNiA3QzE1LjQ0NzcgNyAxNSA2LjU1MjI4IDE1IDZWNEMxNSAzLjczNDc4IDE0Ljg5NDYgMy40ODA0MyAxNC43MDcxIDMuMjkyODlDMTQuNTE5NiAzLjEwNTM2IDE0LjI2NTIgMyAxNCAzSDEwWk01IDVDNS41NTIyOCA1IDYgNS40NDc3MiA2IDZWMjBDNiAyMC4yNjUyIDYuMTA1MzYgMjAuNTE5NiA2LjI5Mjg5IDIwLjcwNzFDNi40ODA0MyAyMC44OTQ2IDYuNzM0NzggMjEgNyAyMUgxN0MxNy4yNjUyIDIxIDE3LjUxOTYgMjAuODk0NiAxNy43MDcxIDIwLjcwNzFDMTcuODk0NiAyMC41MTk2IDE4IDIwLjI2NTIgMTggMjBWNkMxOCA1LjQ0NzcyIDE4LjQ0NzcgNSAxOSA1QzE5LjU1MjMgNSAyMCA1LjQ0NzcyIDIwIDZWMjBDMjAgMjAuNzk1NyAxOS42ODM5IDIxLjU1ODcgMTkuMTIxMyAyMi4xMjEzQzE4LjU1ODcgMjIuNjgzOSAxNy43OTU3IDIzIDE3IDIzSDdDNi4yMDQzNSAyMyA1LjQ0MTI5IDIyLjY4MzkgNC44Nzg2OCAyMi4xMjEzQzQuMzE2MDcgMjEuNTU4NyA0IDIwLjc5NTcgNCAyMFY2QzQgNS40NDc3MiA0LjQ0NzcyIDUgNSA1WiIgZmlsbD0iIzE5MTkxOSIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEwIDEwQzEwLjU1MjMgMTAgMTEgMTAuNDQ3NyAxMSAxMVYxN0MxMSAxNy41NTIzIDEwLjU1MjMgMTggMTAgMThDOS40NDc3MiAxOCA5IDE3LjU1MjMgOSAxN1YxMUM5IDEwLjQ0NzcgOS40NDc3MiAxMCAxMCAxMFoiIGZpbGw9IiMxOTE5MTkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNCAxMEMxNC41NTIzIDEwIDE1IDEwLjQ0NzcgMTUgMTFWMTdDMTUgMTcuNTUyMyAxNC41NTIzIDE4IDE0IDE4QzEzLjQ0NzcgMTggMTMgMTcuNTUyMyAxMyAxN1YxMUMxMyAxMC40NDc3IDEzLjQ0NzcgMTAgMTQgMTBaIiBmaWxsPSIjMTkxOTE5Ii8+CjwvZz4KPC9nPgo8L3N2Zz4K);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2.4rem;
+  background-color: transparent;
+
+  transition: scale 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+.sneakersCard__info {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.4rem;
+}
+
+.sneakersCard__info__item {
+  flex: calc((100% / 3) - 1.6rem);
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+  }
+
+  + .sneakersCard__info__item {
+    padding-left: 1.6rem;
+    border-left: 1px solid $c--gray-80;
+  }
+}

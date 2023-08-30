@@ -1,0 +1,17 @@
+.sneakersList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @media screen and (min-width: #{$breakpoint-md}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

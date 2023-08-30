@@ -1,0 +1,120 @@
+// TODO: import tailwindcss for at least the utilities
+
+// margins
+.mb-56 {
+  margin-bottom: 5.6rem;
+}
+
+.mb-69 {
+  margin-bottom: 5.6rem;
+}
+
+.mt-122 {
+  margin-top: 12.2rem;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-8 {
+  margin-top: 0.8rem;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem;
+}
+
+.mt-24 {
+  margin-top: 2.4rem;
+}
+
+.mb-48 {
+  margin-bottom: 4.8rem;
+}
+
+.mt-48 {
+  margin-top: 4.8rem;
+}
+
+// text
+.text-center {
+  text-align: center;
+}
+
+//display
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.pc-start {
+  place-content: flex-start;
+}
+
+@media screen and (min-width: #{$breakpoint-md}) {
+  // margins
+  .md-m-0 {
+    margin: 0;
+  }
+
+  .md-m-auto {
+    margin: auto;
+  }
+
+  .md-mb-56 {
+    margin-bottom: 5.6rem;
+  }
+
+  // text
+  .md-text-center {
+    text-align: center;
+  }
+
+  .md-text-left {
+    text-align: left;
+  }
+
+  // display
+  .md-d-none {
+    display: none;
+  }
+  .md-d-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: #{$breakpoint-lg}) {
+  // margins
+  .lg-m-0 {
+    margin: 0;
+  }
+
+  .lg-m-auto {
+    margin: auto;
+  }
+
+  .lg-mb-56 {
+    margin-bottom: 5.6rem;
+  }
+
+  // text
+  .lg-text-center {
+    text-align: center;
+  }
+
+  .lg-text-left {
+    text-align: left;
+  }
+}

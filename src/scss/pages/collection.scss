@@ -1,0 +1,65 @@
+#collection {
+  .header {
+    grid-column: col-start 1 / span 4;
+  }
+
+  .img {
+    grid-column: col-start 1 / span 4;
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .content {
+    grid-column: col-start 1 / span 4;
+    height: fit-content;
+  }
+
+  .mobile-btn {
+    grid-column: col-start 1 / span 4;
+  }
+
+  .sneakersList {
+    grid-column: col-start 1 / span 4;
+  }
+
+  @media screen and (min-width: #{$breakpoint-md}) {
+    .header {
+      display: contents;
+      grid-column: col-start 1 / span 12;
+    }
+
+    .header__title {
+      grid-column: col-start 1 / span 5;
+    }
+
+    .header__actions {
+      grid-column: col-start 6 / span 7;
+
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    .content {
+      grid-column: col-start 1 / span 12;
+    }
+
+    .sneakersList {
+      grid-column: col-start 1 / span 12;
+    }
+  }
+
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    .header__title {
+      grid-column: col-start 1 / span 7;
+    }
+    .header__actions {
+      grid-column: col-start 8 / span 5;
+    }
+    .content {
+      grid-column: col-start 3 / span 8;
+    }
+  }
+}

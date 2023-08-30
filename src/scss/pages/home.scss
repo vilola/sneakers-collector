@@ -1,0 +1,30 @@
+#home {
+  place-content: center;
+  row-gap: 56px;
+
+  .content {
+    grid-column: col-start 1 / span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: #{$breakpoint-md}) {
+    .hero {
+      grid-column: col-start 1 / span 6;
+    }
+    .content {
+      grid-column: col-start 8 / span 5;
+    }
+  }
+
+  @media screen and (min-width: #{$breakpoint-lg}) {
+    .hero {
+      grid-column: col-start 1 / span 7;
+    }
+    .content {
+      grid-column: col-start 9 / span 5;
+    }
+  }
+}
